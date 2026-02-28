@@ -14,7 +14,7 @@ ghcr.io/karl8km/clawcloud-hysteria2:latest
 
 ## ⚙️ 必需的环境变量 (Environment Variables)
 
-在爪云的部署配置页面，请务必找到 **环境变量 (Environment Variables)** 设置区域，至少添加以下两个变量(一定要大写，否则读取不了)：
+在爪云的部署配置页面，请务必找到 **环境变量 (Environment Variables)** 设置区域，至少添加以下两个变量(**一定要大写，否则读取不了**)：
 
 - **`PORT`**：输入你想设置（或平台分配给你）的节点**外部访问端口**。（如果不填，默认 `8443`）。
 - **`PASSWORD`**：输入你自己想设置的**节点连接密码**。（如果不填，默认 `kua9`）。
