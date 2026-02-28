@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  hysteria2:
+    build: .                             # 增加本地构建上下文，便于修改文件后可直接重构镜像
+    image: kua9/hysteria2:latest 
+    container_name: hysteria2-server
+    restart: always
+    environment:
+      - PORT=8443
+      - PASSWORD=kua9-hysteria2jp
+      - TZ=Asia/Shanghai                 # 增加时区设定
+    ports:
+      - "8443:8443/udp"                  # 已经去掉了 TCP 映射，仅保留 UDP
+    # network_mode: "host"               # 推荐做法：Hysteria 推荐使用 host 模式性能最佳 (避免 Docker NAT 开销)。开启前需注释掉 ports 端口映射
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"                  # 限制日志大小，防止长期运行撑爆服务器硬盘
+        max-file: "3"
