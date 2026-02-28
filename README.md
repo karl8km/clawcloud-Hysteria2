@@ -9,7 +9,7 @@
 非常简单！在爪云创建应用时，选择 **Docker Image / 容器镜像** 部署方式，并在镜像地址一栏直接填入以下链接：
 
 ```text
-ghcr.io/karl8km/claw.cloud-hysteria2:latest
+ghcr.io/karl8km/clawcloud-hysteria2:latest
 ```
 
 ## ⚙️ 必需的环境变量 (Environment Variables)
