@@ -3,7 +3,7 @@ version: '3.8'
 services:
   hysteria2:
     build: .                             # 增加本地构建上下文，便于修改文件后可直接重构镜像
-    image: kua9/hysteria2:latest 
+    image: ghcr.io/karl8km/clawcloud-hysteria2:latest 
     container_name: hysteria2-server
     restart: always
     environment:
