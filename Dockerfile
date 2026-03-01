@@ -1,5 +1,8 @@
-# [cite_start]使用轻量级的 Alpine 作为基础镜像 [cite: 1]
+# 使用轻量级的 Alpine 作为基础镜像
 FROM alpine:latest
+
+# 👇 关键修改：将镜像关联到你的 GitHub 仓库，这样就会在主页右侧显示了
+LABEL org.opencontainers.image.source="https://github.com/karl8km/clawcloud-Hysteria2"
 
 # 安装必备组件：openssl(用于生成证书), ca-certificates(用于TLS校验), curl(用于下载)
 RUN apk add --no-cache openssl ca-certificates curl tzdata
